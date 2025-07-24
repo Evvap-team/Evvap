@@ -1,0 +1,250 @@
+/* home.css - Responsive styles for Home.jsx */
+
+/* General Layout */
+.home_container {
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Login Main Section */
+.login-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.login-left {
+  flex: 1;
+  min-width: 280px;
+  margin-left: 10%;
+}
+
+.login-left h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.google-btn,
+.microsoft-btn,
+.email-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s;
+  color: black;
+}
+
+.google-btn:hover,
+.microsoft-btn:hover,
+.email-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.google-btn img,
+.microsoft-btn img {
+  width: 24px;
+}
+
+.login-right {
+  flex: 1;
+  text-align: center;
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.disclaimer,
+.join-message {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Cards Section */
+.cards-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.maincards {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.maincards:hover {
+  transform: translateY(-5px);
+}
+
+.img {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Explore Section */
+.explore-section {
+  padding: 2rem 0;
+  background: #f5f5f5;
+}
+
+.explore-articles,
+.explore-jobs {
+  background: #fff;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.tag-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #4c4c4c;
+}
+
+.tag-btn:hover {
+  background: #e9f0ff;
+}
+
+/* Impact Section */
+.impact-section {
+  background: linear-gradient(to bottom, #1d2536, #062c84);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.impact-box {
+  background: white;
+  color: black;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.impact-box h3 span {
+  color: #2a5dff;
+}
+
+/* Features Section */
+.evvaap-features {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.features-list {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.feature-item .icon {
+  font-size: 1.8rem;
+  color: #1a4dd4;
+}
+
+.phone-preview img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-main,
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-left,
+  .login-right {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .maincards {
+    width: 90%;
+  }
+
+  .tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tag-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .google-btn,
+  .microsoft-btn,
+  .email-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
